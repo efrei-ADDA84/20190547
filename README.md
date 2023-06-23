@@ -18,6 +18,12 @@ http://devops-20190547.francecentral.azurecontainer.io:8081/?lat=5.902785&lon=10
 
 ## TP4 Théo MARTIN
 
-Le TP4 se trouve dans le dossier correspondant sur le main.
+Le TP4 se trouve dans le dossier correspondant sur le main.  
 
-On a créé notre main.tf puis rajouté les outputs afin de générer une clé ssh.
+On a créé notre main.tf puis rajouté les outputs afin de générer une clé ssh.  
+
+Sur Windows, le id_rsa n'était pas reconnu. J'ai du passer par un fichier texte private_key.txt pour rentrer la commande suivante :  
+```  ssh -i private_key.txt devops@51.103.85.191 ```  
+
+On est ensuite connecté à la VM.  
+On peut ensuite utiliser ``` terraform destroy ```
